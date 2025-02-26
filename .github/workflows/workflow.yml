@@ -4,6 +4,12 @@ on:
   repository_dispatch:
     types: [test_run]
   workflow_dispatch:
+    inputs:
+      workflow_run_name:
+        description: 'test'
+        default: ''
+        required: false
+        type: string
 
 jobs:
   create_issue:
